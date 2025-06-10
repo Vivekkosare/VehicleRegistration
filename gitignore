@@ -1,0 +1,41 @@
+# .NET build results
+bin/
+obj/
+
+# User-specific files
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio Code settings
+.vscode/
+
+# NuGet packages
+*.nupkg
+packages/
+*.snupkg
+
+# Build results
+*.dll
+*.exe
+*.app
+*.log
+
+# Others
+TestResults/
+*.vspscc
+*.vssscc
+_ReSharper*/
+*.resharper
+*.DotSettings.user
+
+# Rider
+.idea/
+
+# ASP.NET Scaffolding
+ScaffoldingReadMe.txt
+
+# Publish output
+publish/
+out/
