@@ -1,4 +1,4 @@
-namespace Insurance.Infrastructure.Repositories;
+namespace Insurance.Domain.Interfaces;
 
 public interface IDomainSpecificInsuranceCommandRepository<T> where T : class
 {

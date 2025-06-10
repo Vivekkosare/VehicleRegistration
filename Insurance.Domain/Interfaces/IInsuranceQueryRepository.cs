@@ -1,4 +1,4 @@
-namespace Insurance.Infrastructure.Repositories.Insurance.QueryRepository.cs;
+namespace Insurance.Domain.Interfaces;
 
 public interface IInsuranceQueryRepository
 {

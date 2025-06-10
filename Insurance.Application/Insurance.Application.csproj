@@ -9,6 +9,6 @@
     <PackageReference Include="MediatR.Extensions.Microsoft.DependencyInjection" Version="11.1.0" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Insurance.Domain\Insurance.Domain.csproj" />
+    <ProjectReference Include="..\Insurance.Infrastructure\Insurance.Infrastructure.csproj" />
   </ItemGroup>
 </Project>

@@ -1,4 +1,4 @@
-namespace Insurance.Infrastructure.Repositories.Insurance.CommandRepository;
+namespace Insurance.Domain.Interfaces;
 
 public interface IInsuranceCommandRepository
 {
