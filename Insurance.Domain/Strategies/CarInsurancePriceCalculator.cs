@@ -1,8 +1,11 @@
+using Insurance.Domain.Entities;
+using Insurance.Domain.Interfaces;
+
 namespace Insurance.Domain.Strategies;
 
-public class CarInsurancePriceCalculator : IInsuranceCalculatorStrategy
+public class CarInsurancePriceCalculator(IVehicleRegistrationAPIClient client) : IInsuranceCalculatorStrategy
 {
-    public decimal CalculatePrice(Insurance insurance)
+    public decimal CalculatePrice(Entities.Insurance insurance)
     {
         if (insurance is not CarInsurance carInsurance)
         {
@@ -15,9 +18,11 @@ public class CarInsurancePriceCalculator : IInsuranceCalculatorStrategy
         return insurance.InsuranceProduct.Price;
     }
 
-    public Task<object?> FetchAdditionalInformationAsync(Insurance insurance)
+    public async Task<object?> FetchAdditionalInformationAsync(Entities.Insurance insurance)
     {
         // Implement logic to fetch additional information if needed
-        return Task.FromResult<object?>(null);
+        //return Task.FromResult<object?>(null);
+        var data = await client.GetVehicleRegistrationAsync(insurance.PersonalIdentificationNumber);
+        return data;
     }
 }

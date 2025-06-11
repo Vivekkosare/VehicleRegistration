@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
 namespace Insurance.Infrastructure.Configurations;
 
 public class PetInsuranceConfiguration : IEntityTypeConfiguration<Insurance.Domain.Entities.PetInsurance>

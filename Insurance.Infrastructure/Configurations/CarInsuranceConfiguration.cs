@@ -1,8 +1,12 @@
+using Insurance.Domain.Entities;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
+
 namespace Insurance.Infrastructure.Configurations;
 
-public class CarInsuranceConfiguration : EntityTypeConfiguration<Insurance.Domain.Entities.CarInsurance>
+public class CarInsuranceConfiguration : IEntityTypeConfiguration<Domain.Entities.CarInsurance>
 {
-    public override void Configure(EntityTypeBuilder<Insurance.Domain.Entities.CarInsurance> builder)
+    public void Configure(EntityTypeBuilder<CarInsurance> builder)
     {
         builder.ToTable("CarInsurances")
             .HasKey(i => i.Id);

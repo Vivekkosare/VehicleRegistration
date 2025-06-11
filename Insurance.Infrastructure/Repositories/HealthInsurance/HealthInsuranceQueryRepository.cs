@@ -1,4 +1,5 @@
 
+using Insurance.Domain.Interfaces;
 using Insurance.Infrastructure.DbContexts;
 using Microsoft.EntityFrameworkCore;
 

@@ -2,6 +2,6 @@ namespace Insurance.Domain.Strategies;
 
 public interface IInsuranceCalculatorStrategy
 {
-    decimal CalculatePrice(Insurance insurance);
-    Task<object?> FetchAdditionalInformationAsync(Insurance insurance);
+    decimal CalculatePrice(Entities.Insurance insurance);
+    Task<object?> FetchAdditionalInformationAsync(Entities.Insurance insurance);
 }

@@ -16,13 +16,13 @@ public class InsuranceProductConfiguration : IEntityTypeConfiguration<Insurance.
 
         builder.Property(it => it.Name)
         .IsRequired()
-        .HasMaxLength(100);
+        .HasMaxLength(20);
 
         builder.Property(it => it.InsuranceCode)
         .IsRequired()
-        .HasMaxLength(20);
+        .HasMaxLength(15);
 
-        builder.Property(it => it.Price)
+        builder.Property(it => it.BasePrice)
         .IsRequired()
         .HasColumnType("decimal(18,2)");
 

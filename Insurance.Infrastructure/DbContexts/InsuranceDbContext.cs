@@ -24,6 +24,7 @@ namespace Insurance.Infrastructure.DbContexts
             modelBuilder.ApplyConfiguration<Insurance.Domain.Entities.HealthInsurance>(new HealthInsuranceConfiguration());
             modelBuilder.ApplyConfiguration<Insurance.Domain.Entities.CarInsurance>(new CarInsuranceConfiguration());
             modelBuilder.ApplyConfiguration<Insurance.Domain.Entities.PetInsurance>(new PetInsuranceConfiguration());
+            modelBuilder.ApplyConfiguration<Insurance.Domain.Entities.InsuranceProduct>(new InsuranceProductConfiguration());
         }
     }
 }

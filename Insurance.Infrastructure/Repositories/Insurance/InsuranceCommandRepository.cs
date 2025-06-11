@@ -1,4 +1,5 @@
 
+using Insurance.Domain.Interfaces;
 using Insurance.Infrastructure.DbContexts;
 using Insurance.Infrastructure.Repositories.HealthInsurance.CommandRepository;
 using Microsoft.EntityFrameworkCore;

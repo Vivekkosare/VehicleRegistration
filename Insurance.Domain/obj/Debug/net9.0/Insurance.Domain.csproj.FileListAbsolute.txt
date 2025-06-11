@@ -1,0 +1,5 @@
+/Users/vivekkosare/Development/assignments/Insurance.Domain/obj/Debug/net9.0/Insurance.Domain.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vivekkosare/Development/assignments/Insurance.Domain/obj/Debug/net9.0/Insurance.Domain.AssemblyInfoInputs.cache
+/Users/vivekkosare/Development/assignments/Insurance.Domain/obj/Debug/net9.0/Insurance.Domain.AssemblyInfo.cs
+/Users/vivekkosare/Development/assignments/Insurance.Domain/obj/Debug/net9.0/Insurance.Domain.csproj.CoreCompileInputs.cache
+/Users/vivekkosare/Development/assignments/Insurance.Domain/obj/Debug/net9.0/Insurance.Domain.sourcelink.json

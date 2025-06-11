@@ -1,5 +1,5 @@
+using Insurance.Domain.Interfaces;
 using Insurance.Infrastructure.DbContexts;
-using Insurance.Infrastructure.Repositories.Insurance.CommandRepository;
 
 namespace Insurance.Infrastructure.Repositories.CarInsurance;
 
