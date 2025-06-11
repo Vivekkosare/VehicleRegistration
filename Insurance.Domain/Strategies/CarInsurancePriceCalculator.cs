@@ -5,6 +5,8 @@ namespace Insurance.Domain.Strategies;
 
 public class CarInsurancePriceCalculator(IVehicleRegistrationAPIClient client) : IInsuranceCalculatorStrategy
 {
+    public string InsuranceCode => "CAR";
+
     public decimal CalculatePrice(Entities.Insurance insurance)
     {
         if (insurance is not CarInsurance carInsurance)
@@ -12,10 +14,10 @@ public class CarInsurancePriceCalculator(IVehicleRegistrationAPIClient client) :
             throw new ArgumentException("Invalid insurance type for car insurance price calculation.");
         }
 
-        
+
         //Custom logic for calculating car insurance price
         // For example, you might consider the car's registration number, age, and other factors
-        return insurance.InsuranceProduct.Price;
+        return insurance.InsuranceProduct.BasePrice;
     }
 
     public async Task<object?> FetchAdditionalInformationAsync(Entities.Insurance insurance)

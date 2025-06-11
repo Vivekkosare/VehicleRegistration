@@ -25,6 +25,9 @@ public class InsuranceProductQueryRepository(InsuranceDbContext _dbContext) : II
         }
         var insuranceProduct = await _dbContext.InsuranceProducts
             .FirstOrDefaultAsync(ip => ip.Id == id);
+
+
+
         if (insuranceProduct == null)
         {
             throw new KeyNotFoundException($"No insurance product found with ID: {id}");

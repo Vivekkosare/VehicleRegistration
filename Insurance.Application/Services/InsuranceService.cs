@@ -48,4 +48,24 @@ IInsuranceQueryRepository _insuranceQueryRepo) : IInsuranceService
         }
         return insurance;
     }
+
+    public async Task<IEnumerable<Domain.Entities.Insurance>> GetInsurancesByPersonalIdentificationNumberAsync(string personalIdentificationNumber)
+    {
+        if (string.IsNullOrWhiteSpace(personalIdentificationNumber))
+        {
+            throw new ArgumentException("Personal identification number cannot be null or empty", nameof(personalIdentificationNumber));
+        }
+        var insurances = await _insuranceQueryRepo
+                        .GetInsurancesByPersonalIdentificationNumberAsync(personalIdentificationNumber);
+        if (insurances == null || !insurances.Any())
+        {
+            throw new KeyNotFoundException($"No insurances found for personal identification number: {personalIdentificationNumber}");
+        }
+        if (insurances.Any(i => i.InsuranceProduct.InsuranceCode == "CAR"))
+        {
+
+        }
+
+        return insurances;
+    }
 }
